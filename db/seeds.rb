@@ -7,7 +7,7 @@ car1 = Car.new({
   "buying_cost" => 100000,
   "selling_price" => 300000,
   "stock" => 2,
-  "manufacturer_id" =>
+  "manufacturer_id" => manufacturer1.id
   })
 
   car2 = Car.new({
@@ -16,7 +16,7 @@ car1 = Car.new({
     "buying_cost" => 5000000,
     "selling_price" => 10000000,
     "stock" => 1,
-    "manufacturer_id" =>
+    "manufacturer_id" => manufacturer1.id
     })
 
     car3 = Car.new({
@@ -25,7 +25,7 @@ car1 = Car.new({
       "buying_cost" => 2500000,
       "selling_price" => 5000000,
       "stock" => 3,
-      "manufacturer_id" =>
+      "manufacturer_id" => manufacturer2.id
 
       })
 
@@ -35,7 +35,7 @@ car1 = Car.new({
         "buying_cost" => 2000000,
         "selling_price" => 4000000,
         "stock" => 3,
-        "manufacturer_id" =>
+        "manufacturer_id" => manufacturer2.id
         })
 
         car5 = Car.new({
@@ -44,7 +44,7 @@ car1 = Car.new({
           "buying_cost" => 1000000,
           "selling_price" => 2000000,
           "stock" => 4,
-          "manufacturer_id" =>
+          "manufacturer_id" => manufacturer3.id
           })
 
           car6 = Car.new({
@@ -53,7 +53,7 @@ car1 = Car.new({
             "buying_cost" => 8000000,
             "selling_price" => 16000000,
             "stock" => 1,
-            "manufacturer_id" =>
+            "manufacturer_id" => manufacturer3.id
             })
 car1.save()
 car2.save()
