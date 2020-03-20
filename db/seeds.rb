@@ -61,3 +61,22 @@ car3.save()
 car4.save()
 car5.save()
 car6.save()
+
+manufacturer1 = Manufacturer.new({
+  "name" => "Mclaren",
+  "year_formed" => 1963
+})
+
+manufacturer2 = Manufacturer.new({
+  "name" => "ferrari",
+  "year_formed" => 1939
+})
+
+manufacturer3 = Manufacturer.new({
+  "name" => "Mercedes",
+  "year_formed" => 1923
+  })
+
+manufacturer1.save()
+manufacturer2.save()
+manufacturer3.save()
