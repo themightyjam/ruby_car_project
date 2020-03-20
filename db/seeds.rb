@@ -18,3 +18,13 @@ car1 = Car.new({
     "stock" => 1,
     "manufacturer_id" =>
     })
+
+    car3 = Car.new({
+      "name" => "f2004",
+      "year_made" => 2004,
+      "buying_cost" => 2500000,
+      "selling_price" => 5000000,
+      "stock" => 3,
+      "manufacturer_id" =>
+
+      })
