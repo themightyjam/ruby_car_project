@@ -1,7 +1,7 @@
 DROP TABLE cars;
 DROP TABLE manufacturers;
 
-CREATE TABLE cars (
+CREATE TABLE car (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   year_made INT,
@@ -11,7 +11,7 @@ CREATE TABLE cars (
   manufacturer_id INT REFERENCES
 );
 
-CREATE TABLE manufacturers (
+CREATE TABLE manufacturer (
   id SERIAL PRIMARY KEY,
   name VARCHAR (255),
   year_formed INT

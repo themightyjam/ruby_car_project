@@ -10,33 +10,32 @@ car1 = Car.new({
   "manufacturer_id" => manufacturer1.id
   })
 
-  car2 = Car.new({
-    "name" => "mp4/4",
-    "year_made" => 1988,
-    "buying_cost" => 5000000,
-    "selling_price" => 10000000,
-    "stock" => 1,
-    "manufacturer_id" => manufacturer1.id
+car2 = Car.new({
+  "name" => "mp4/4",
+  "year_made" => 1988,
+  "buying_cost" => 5000000,
+  "selling_price" => 10000000,
+  "stock" => 1,
+  "manufacturer_id" => manufacturer1.id
+  })
+
+car3 = Car.new({
+  "name" => "f2004",
+  "year_made" => 2004,
+  "buying_cost" => 2500000,
+  "selling_price" => 5000000,
+  "stock" => 3,
+  "manufacturer_id" => manufacturer2.id
+})
+
+car4 = Car.new({
+    "name" => "126C",
+    "year_made" => 1981,
+    "buying_cost" => 2000000,
+    "selling_price" => 4000000,
+    "stock" => 3,
+    "manufacturer_id" => manufacturer2.id
     })
-
-    car3 = Car.new({
-      "name" => "f2004",
-      "year_made" => 2004,
-      "buying_cost" => 2500000,
-      "selling_price" => 5000000,
-      "stock" => 3,
-      "manufacturer_id" => manufacturer2.id
-
-      })
-
-      car4 = Car.new({
-        "name" => "126C",
-        "year_made" => 1981,
-        "buying_cost" => 2000000,
-        "selling_price" => 4000000,
-        "stock" => 3,
-        "manufacturer_id" => manufacturer2.id
-        })
 
         car5 = Car.new({
           "name" => "W09",
