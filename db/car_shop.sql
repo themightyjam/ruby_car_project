@@ -16,3 +16,4 @@ CREATE TABLE manufacturers (
   name VARCHAR (255),
   year_formed INT
 );
+s
