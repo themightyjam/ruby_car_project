@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Manufacturer
 
-  attr_reader :name, :year_formed
+  attr_reader :name, :year_formed, :id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -21,7 +21,8 @@ def save()
       $1, $2
   )
   RETURNING *"
-  values = [@name, @year_made]
-  manufacturer_data = SqlRunner.run(sql, values)
-  @id = manufacturer_data()['id'].to_i
+  values = [@name, @year_formed]
+  manufacturer_data = SqlRunner.run(sql, values)[0]
+  @id = manufacturer_data['id'].to_i
+end
 end
