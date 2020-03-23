@@ -1,0 +1,14 @@
+<h2>Cars</h2>
+<div id="car_wrapper">
+<% @cars.each do |car| %>
+
+<div class="car">
+  <h3><a href="/cars/<%= car.id %>"><%= car.name %></a></h3>
+  <p>year_made: <% car.year_made %></p>
+  <p>Buying Cost: <% car.buying_cost %></p>
+  <p>Selling Price: <% car.selling_price %></p>
+  <p>Stock: <% car.stock %></p>
+  </div>
+
+  <% end %>
+</div>

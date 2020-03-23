@@ -77,12 +77,12 @@ end
 def self.all()
   sql = "Select * FROM cars"
   car_data = SqlRunner.run(sql)
-  cars = map.items(car_data)
+  cars = map_items(car_data)
   return cars
 end
 
 def self.map_items(car_data)
-  return car_data.map { |car| car.new(car)}
+  return car_data.map { |car| Car.new(car)}
 end
 
 def self.find(id)
@@ -92,5 +92,5 @@ def self.find(id)
   result = SqlRunner.run(sql, values).first
   car = Car.new(result)
   return car
-end  
+end
 end
