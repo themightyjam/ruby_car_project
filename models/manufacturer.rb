@@ -25,4 +25,13 @@ def save()
   manufacturer_data = SqlRunner.run(sql, values)[0]
   @id = manufacturer_data['id'].to_i
 end
+
+def self.find(id)
+  sql = "SELECT * FROM manufacturers
+  WHERE id = $1"
+  values = [id]
+  result = SqlRunner.run(sql, values).first
+  manufacturer = Manufacturer.new(result)
+  return manufacturer
+end
 end
