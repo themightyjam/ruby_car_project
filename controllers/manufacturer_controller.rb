@@ -1,5 +1,5 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('models/car')
-require_relative('models/manufacturer')
+require_relative('../models/car.rb')
+require_relative('../models/manufacturer.rb')
 also_reload('./models/*')
