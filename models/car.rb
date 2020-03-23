@@ -80,3 +80,17 @@ def self.all()
   cars = map.items(car_data)
   return cars
 end
+
+def self.map_items(car_data)
+  return car_data.map { |car| car.new(car)}
+end
+
+def self.find(id)
+  sql = "SELECT * FROM cars
+  WHERE id = $1"
+  values = [id]
+  result = SqlRunner.run(sql, values).first
+  car = Car.new(result)
+  return car
+end  
+end
