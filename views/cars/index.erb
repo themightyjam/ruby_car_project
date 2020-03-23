@@ -5,8 +5,12 @@
 
   <div class="car">
     <h3><a href="/cars/<%= car.id %>"><%= car.name %></a></h3>
+    <p>Manufacturer <%= car.manufacturer_id %></p>
     <p>Year made: <%= car.year_made %></p>
     <p>Buying cost: <%= car.buying_cost %></p>
+    <p>Sale Price: <%= car.selling_price %></p>
+    <p>Stock: <%= car.stock %></p>
+
   </div>
 
   <% end %>
