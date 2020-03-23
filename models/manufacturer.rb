@@ -34,4 +34,14 @@ def self.find(id)
   manufacturer = Manufacturer.new(result)
   return manufacturer
 end
+
+def self.all()
+  sql = "SELECT * FROM manufacturers"
+  manufacturer_data = SqlRunner.run(sql)
+  manufacturers = map_items(manufacturer_data)
+  return manufacturer
+end
+
+def self.map_items(manufacturer_data)
+  return manufacturer_data.map { |manufacturer| Manufacturer.new(manufacturer)}
 end
