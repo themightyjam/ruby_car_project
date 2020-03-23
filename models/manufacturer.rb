@@ -45,3 +45,4 @@ end
 def self.map_items(manufacturer_data)
   return manufacturer_data.map { |manufacturer| Manufacturer.new(manufacturer)}
 end
+end 
