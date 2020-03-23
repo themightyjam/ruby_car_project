@@ -37,5 +37,37 @@ def save()
 
 def manufacturer()
   manufacturer = Manufacturer.find(@manufacturer_id)
-  return manufacturer  
+  return manufacturer
+end
+
+def self.find(id)
+  sql = "SELECT * FROM cars
+  WHERE id = $1"
+  values = [id]
+  result = SqlRunner.run(sql, values).first
+  car = Car.new(result)
+  return car
+end
+
+def update()
+  sql = "UPDATE students set
+    (
+    name,
+    year_made,
+    buying_cost,
+    selling_price,
+    stock,
+    manufacturer_id
+    ) =
+    (
+      $1, $2, $3, $4, $5, $6
+    )
+    WHERE id = $7"
+    values = [@name, @year_made, @buying_cost, @selling_price, @stock, @manufacturer_id]
+    SqlRunner.run(sql, values)
+end
+
+
+
+
 end
