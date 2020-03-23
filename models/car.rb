@@ -50,7 +50,7 @@ def self.find(id)
 end
 
 def update()
-  sql = "UPDATE students set
+  sql = "UPDATE cars set
     (
     name,
     year_made,
@@ -67,7 +67,11 @@ def update()
     SqlRunner.run(sql, values)
 end
 
-
-
+def delete()
+  sql = "DELETE FROM cars
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+end 
 
 end
