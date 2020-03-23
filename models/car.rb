@@ -72,6 +72,11 @@ def delete()
   WHERE id = $1"
   values = [@id]
   SqlRunner.run(sql, values)
-end 
+end
 
+def self.all()
+  sql = "Select * FROM cars"
+  car_data = SqlRunner.run(sql)
+  cars = map.items(car_data)
+  return cars
 end
