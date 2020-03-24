@@ -1,0 +1,37 @@
+<form method="post" action="/cars/<%= @car.id %>">
+  <label for="car_name-field"> Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%= @car.name %>"
+  />
+
+
+
+  <label for="car_selection">Select a manufacturer:</label>
+  <select name="manufacturer" id="car-selection">
+    <option
+    value="Mclaren"
+    <%= "selected" if @manufacturer.name == "Mclaren" %>
+    >Mclaren</option>
+    <option
+    value="ferrari"
+    <%= "selected" if @manufacturer.name == "ferrari" %>
+    >Ferrari</option>
+    <option
+    value="Mercedes"
+    <%= "selected" if @manufacturer.name == "Mercedes" %>
+    >Mercedes</option>
+  </select>
+
+  <label for="stock-field">Stock:</label>
+  <input
+  type="number"
+  name="stock"
+  id="stock-field"
+  value="<%= @car.stock() %>"
+  />
+
+  <input type='submit' value="Edit Cars">
+</form>
