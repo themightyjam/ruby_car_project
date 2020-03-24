@@ -62,7 +62,7 @@ def update()
     (
       $1, $2, $3, $4, $5, $6
     )
-    WHERE id = $7"
+    WHERE id = $6"
     values = [@name, @year_made, @buying_cost, @selling_price, @stock, @manufacturer_id]
     SqlRunner.run(sql, values)
 end

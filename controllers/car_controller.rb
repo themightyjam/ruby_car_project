@@ -9,6 +9,10 @@ get '/cars' do
 erb(:"cars/index")
 end
 
+get '/cars/new' do
+  erb  (:new)
+end
+
 get '/cars/:id' do
   @car = Car.find(params['id'].to_i)
   erb(:"cars/show")
@@ -18,4 +22,9 @@ get '/cars/:id/edit' do
   @car = Car.find( params[:id] )
   @manufacturer = Manufacturer.find(@car.manufacturer_id)
   erb( :"cars/edit" )
+end
+
+post '/cars/:id' do
+  Car.new(params).update
+  redirect to '/cars'
 end
