@@ -13,3 +13,8 @@ get '/cars/:id' do
   @car = Car.find(params['id'].to_i)
   erb(:"cars/show")
 end
+
+get '/cars/:id/edit' do
+  @car = Car.find( params[:id] )
+  erb( :"cars/edit" )
+end
