@@ -8,3 +8,8 @@ get '/cars' do
   @cars = Car.all()
 erb(:"cars/index")
 end
+
+get '/cars/:id' do
+  @car = Car.find(params['id'].to_i)
+  erb(:"cars/show")
+end
