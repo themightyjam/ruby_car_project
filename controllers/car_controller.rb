@@ -18,6 +18,12 @@ get '/cars/:id' do
   erb(:"cars/show")
 end
 
+get '/cars' do
+  @car = Car.new(params)
+  @car.save()
+  redirect to '/cars'
+end
+
 get '/cars/:id/edit' do
   @car = Car.find( params[:id] )
   @manufacturer = Manufacturer.find(@car.manufacturer_id)
