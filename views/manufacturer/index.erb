@@ -1,0 +1,7 @@
+<h2>Manufacturer List</h2>
+
+<div id="manufacturer-wrapper">
+  <% @manufacturers.each do |manufacturer| %>
+
+  <div class="manufacturer">
+    <h3><a href="/manufacturer/<%= manufacturer.id %>"><%= manufacturer.name %></a></h3>
