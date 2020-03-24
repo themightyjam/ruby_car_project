@@ -10,7 +10,7 @@ erb(:"cars/index")
 end
 
 get '/cars/new' do
-  erb  (:new)
+  erb  (:"cars/new")
 end
 
 get '/cars/:id' do
