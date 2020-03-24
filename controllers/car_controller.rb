@@ -16,5 +16,6 @@ end
 
 get '/cars/:id/edit' do
   @car = Car.find( params[:id] )
+  @manufacturer = Manufacturer.find(@car.manufacturer_id)
   erb( :"cars/edit" )
 end

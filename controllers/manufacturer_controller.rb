@@ -5,7 +5,7 @@ require_relative('../models/manufacturer.rb')
 also_reload('./models/*')
 
 
-get '/manufacturer' do
+get '/manufacturers' do
   @manufacturers = Manufacturer.all()
 erb(:"manufacturer/index")
 end

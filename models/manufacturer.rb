@@ -39,10 +39,10 @@ def self.all()
   sql = "SELECT * FROM manufacturers"
   manufacturer_data = SqlRunner.run(sql)
   manufacturers = map_items(manufacturer_data)
-  return manufacturer
+  return manufacturers
 end
 
 def self.map_items(manufacturer_data)
   return manufacturer_data.map { |manufacturer| Manufacturer.new(manufacturer)}
 end
-end 
+end
