@@ -19,8 +19,13 @@ get '/manufacturer/:id' do
   erb(:"manufacturer/show")
 end
 
-get '/manufacturer' do
+post '/manufacturer' do
   @manufacturer = Manufacturer.new(params)
   @manufacturer.save()
   redirect to '/manufacturer'
+end
+
+get '/manufacturer/:id/edit' do
+  @manufacturer = Manufacturer.find(params[:id])
+  erb (:"manufacturer/edit")
 end
