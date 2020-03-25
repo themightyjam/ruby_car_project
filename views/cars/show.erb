@@ -7,3 +7,7 @@
 <p>Stock: <%= @car.stock %></p>
 
 <p><a href="/cars/<%= @car.id %>/edit">Edit Stock</a></p>
+
+<form method="post" action="/cars/<%= @car.id %>/delete">
+  <input type="submit" value="Delete Stock item"/>
+</form>

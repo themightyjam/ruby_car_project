@@ -35,6 +35,18 @@ def self.find(id)
   return manufacturer
 end
 
+def delete()
+  sql = "DELETE FROM manufacturers
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+end
+
+def self.delete_all
+  sql = "DELETE FROM manufacturers"
+  SqlRunner.run( sql )
+end
+
 def self.all()
   sql = "SELECT * FROM manufacturers"
   manufacturer_data = SqlRunner.run(sql)

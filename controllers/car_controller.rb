@@ -37,7 +37,7 @@ post '/cars/:id' do
 end
 
 post '/cars/:id/delete' do # delete
-  stock = PizzaOrder.find( params[:id] )
+  stock = Car.find( params[:id] )
   stock.delete()
   redirect to '/cars'
 end

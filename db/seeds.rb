@@ -1,6 +1,9 @@
 require_relative('../models/car')
 require_relative('../models/manufacturer')
 
+car.delete_all()
+manufacturer.delete_all()
+
 manufacturer1 = Manufacturer.new({
   "name" => "Mclaren",
   "year_formed" => 1963

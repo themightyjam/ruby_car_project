@@ -74,6 +74,11 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
+def self.delete_all
+  sql = "DELETE FROM manufacturers"
+  SqlRunner.run( sql )
+end
+
 def self.all()
   sql = "Select * FROM cars"
   car_data = SqlRunner.run(sql)
@@ -92,5 +97,10 @@ def self.find(id)
   result = SqlRunner.run(sql, values).first
   car = Car.new(result)
   return car
+end
+
+def self.delete_all
+  sql = "DELETE FROM victims"
+  SqlRunner.run( sql )
 end
 end

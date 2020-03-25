@@ -3,3 +3,7 @@
 <p>Year formed: <%= @manufacturer.year_formed %></p>
 
 <p><a href="/manufacturer/<%= @manufacturer.id %>/edit">Edit Manufacturer</a></p>
+
+<form method="post" action="/manufacturer/<%= @manufacturer.id %>/delete">
+  <input type="submit" value="Delete Manufacturer"/>
+</form>
