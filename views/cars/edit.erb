@@ -7,23 +7,29 @@
   value="<%= @car.name %>"
   />
 
+  <label for="year-made-field">Year made:</label>
+  <input
+  type="number"
+  name="Year made"
+  id="year_made_field"
+  value="<%= @car.year_made %>"
+  />
 
+  <label for="buying_cost_field">Buying cost:</label>
+  <input
+  type="number"
+  name="Buying cost"
+  id="buying_cost_field"
+  value="<%= @car.buying_cost %>"
+  />
 
-  <label for="car-selection">Select a manufacturer:</label>
-  <select name="manufacturer_id" id="car-selection">
-    <option
-    value="Mclaren"
-    <%= "selected" if @manufacturer.name == "Mclaren" %>
-    >Mclaren</option>
-    <option
-    value="ferrari"
-    <%= "selected" if @manufacturer.name == "ferrari" %>
-    >Ferrari</option>
-    <option
-    value="Mercedes"
-    <%= "selected" if @manufacturer.name == "Mercedes" %>
-    >Mercedes</option>
-  </select>
+  <label for="selling-price-field">Selling price:</label>
+  <input
+  type="number"
+  name="Selling_price"
+  id="selling_price_field"
+  value="<%= @car.selling_price %>"
+  />
 
   <label for="stock-field">Stock:</label>
   <input
@@ -32,6 +38,16 @@
   id="stock-field"
   value="<%= @car.stock() %>"
   />
+
+  <label>
+    Select a Manufacturer:
+    <select name="manufacturer_id">
+      <% for manufacturer in @manufacturers %>
+      <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+      <% end %>
+    </select>
+  </label>
+
 
   <input type='submit' value="Edit Cars">
 </form>

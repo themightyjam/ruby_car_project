@@ -26,8 +26,8 @@ post '/cars' do
 end
 
 get '/cars/:id/edit' do
-  @car = Car.find( params[:id] )
-  @manufacturer = Manufacturer.find(@car.manufacturer_id)
+  @manufacturers = Manufacturer.all
+  @car = Car.find( params['id'] )
   erb( :"cars/edit" )  #edit
 end
 
