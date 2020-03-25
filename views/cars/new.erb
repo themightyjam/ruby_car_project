@@ -1,25 +1,47 @@
 <form method="post" action="/cars">
-  <label for="name-field">Name:</label>
+  <label for="name_field">Name:</label>
   <input
   type="text"
   name="name"
-  id="name-field"
+  id="name_field"
   />
 
+  <label for="year-made-field">Year made:</label>
+  <input
+  type="number"
+  name="Year made"
+  id="year_made_field"
+  />
 
-  <label for="car-selection">Select a car:</label>
-  <select name="manufacturer" id="manufacturer-selection">
-    <option value="Mclaren">Mclaren</option>
-    <option value="ferrari">ferrari</option>
-    <option value="Mercedes">Mercedes</option>
-  </select>
+  <label for="buying_cost_field">Buying cost:</label>
+  <input
+  type="number"
+  name="Buying cost"
+  id="buying_cost_field"
+  />
 
-  <label for="stock-field">Stock:</label>
+  <label for="selling-price-field">Selling price:</label>
+  <input
+  type="number"
+  name="Selling_price"
+  id="selling_price_field"
+  />
+
+  <label for="stock_field">Stock:</label>
   <input
   type="number"
   name="stock"
-  id="stock-field"
+  id="stock_field"
   />
+
+  <label>
+    Select a Manufacturer:
+    <select name="manufacturer_id">
+      <% for manufacturer in @manufacturers %>
+      <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+      <% end %>
+    </select>
+  </label>
 
   <input type="submit" value="Order Car">
 </form>

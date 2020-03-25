@@ -10,6 +10,7 @@ erb(:"cars/index") #index
 end
 
 get '/cars/new' do
+  @manufacturers = Manufacturer.all()
   erb  (:"cars/new") #new
 end
 
