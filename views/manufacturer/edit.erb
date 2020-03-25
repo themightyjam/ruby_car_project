@@ -1,0 +1,19 @@
+<form method="post" action="/manufacturer/<%= @manufacturer.id %>">
+  <label for="manufacturer_name-field"> Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%= @manufacturer.name %>"
+  />
+
+
+  <label for="year-formed-field">Stock:</label>
+  <input
+  type="number"
+  name="stock"
+  id="year-formed-field"
+  />
+
+  <input type="submit" value="Edit Car">
+</form>
