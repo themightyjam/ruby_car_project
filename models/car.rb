@@ -100,7 +100,7 @@ def self.find(id)
 end
 
 def self.delete_all
-  sql = "DELETE FROM victims"
+  sql = "DELETE FROM cars"
   SqlRunner.run( sql )
 end
 end

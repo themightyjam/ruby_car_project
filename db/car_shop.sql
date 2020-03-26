@@ -14,5 +14,5 @@ CREATE TABLE cars (
   buying_cost INT,
   selling_price INT,
   stock INT,
-  manufacturer_id INT REFERENCES manufacturers(id)
+  manufacturer_id INT REFERENCES manufacturers(id) ON DELETE CASCADE 
 );
