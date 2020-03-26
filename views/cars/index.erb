@@ -1,11 +1,16 @@
-<h2>Car Inventory</h2>
+<h1><span style="text-decoration: underline;">Shauns Retro F1 Car Shop </h1>
+
+<h2>Inventory List</h2>
+
+<p>&nbsp;</p>
+
 
 <div id="car-wrapper">
   <% @cars.each do |car| %>
 
   <div class="car">
     <h3><a href="/cars/<%= car.id %>"><%= car.name %></a></h3>
-    <p>Manufacturer <%= car.manufacturer_id %></p>
+    <p>Manufacturer: <%= Manufacturer.find(car.manufacturer_id).name %></p>
     <p>Year made: <%= car.year_made %></p>
     <p>Buying cost: <%= car.buying_cost %></p>
     <p>Sale Price: <%= car.selling_price %></p>
