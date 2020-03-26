@@ -1,7 +1,7 @@
 body {
-  background-color: #FFBA08:
+  background-image: url('/images/site-background.png');
   background-size: 100%;
-  background-repeat: no-repeat;
+
   color: #99011A;
     font-family: 'Merriweather', serif;
     padding: 0px;
